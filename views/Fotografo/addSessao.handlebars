@@ -1,0 +1,29 @@
+<section class="container">
+        <h1 class="text-center">Cadastrar Sessão Fotográfica</h1>
+        <form action="/store" method="post">
+        
+        <section class="mb-2">
+            <label for="cliente">Cliente</label>
+            <input type="text" id="cliente" name="cliente" class="form-control">
+        </section>
+
+        <section class="mb-2">
+                <label for="data">Data</label>
+                <input type="text" id="data" name="data" class="form-control">
+        </section>
+        <section class="mb-2">
+            <label for="tipo">Escolha o tipo de Sessão</label>
+            <select name="tipo" id="tipo" class="form-select">
+            <option value="">Escolha uma opção...</option>
+            </select>
+
+        <section class="mb-2">
+            <label for="preco">Preço</label>
+            <input type="number">
+        </section>
+        <section class="mb-2 d-flex justify-content-end">
+            <button class="btn btn-primary" type="submit">Cadastrar</button>
+        </section>
+        </section>
+        </form>
+</section>
