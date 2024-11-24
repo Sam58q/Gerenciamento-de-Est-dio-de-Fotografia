@@ -1,29 +1,49 @@
-<section class="container">
+<section class="container sec1">
         <h1 class="text-center">Cadastrar Sessão Fotográfica</h1>
-        <form action="/store" method="post">
+        <form action="/fotografo/store" method="post">
         
         <section class="mb-2">
             <label for="cliente">Cliente</label>
-            <input type="text" id="cliente" name="cliente" class="form-control">
+            <input type="text" id="cliente" name="cliente" class="form-control" required>
         </section>
 
         <section class="mb-2">
                 <label for="data">Data</label>
-                <input type="text" id="data" name="data" class="form-control">
+                <input type="text" id="data" name="data" class="form-control" required>
         </section>
         <section class="mb-2">
             <label for="tipo">Escolha o tipo de Sessão</label>
-            <select name="tipo" id="tipo" class="form-select">
+            <select name="tipo" id="tipo" class="form-select" required>
             <option value="">Escolha uma opção...</option>
+            <option value="Ensaio de gestante">Ensaio de gestante</option>
+            <option value="Ensaio de casal">Ensaio de casal</option>
+            <option value="Ensaio de família">Ensaio de família</option>
+            <option value="Ensaio profissional/branding">Ensaio profissional</option>
             </select>
 
         <section class="mb-2">
             <label for="preco">Preço</label>
-            <input type="number">
+           <div class="input-group mb-3">
+            <span class="input-group-text">R$</span>
+            <input type="text" class="form-control" id="preco" name="preco" aria-label="Amount (to the nearest dollar)" required>
+            <span class="input-group-text">.00</span>
+            </div>
         </section>
         <section class="mb-2 d-flex justify-content-end">
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+            <button class="btn btn-primary " type="submit">Cadastrar</button>
         </section>
         </section>
         </form>
 </section>
+
+
+<style>
+
+    body{
+        background-color: #e8f1f2;
+    }
+    .sec1{
+        width: 50%;
+        margin-top: 10%;
+    }
+</style>

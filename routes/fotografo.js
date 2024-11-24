@@ -4,11 +4,13 @@ const router = express.Router()
 const fotografo = require('../models/fotografos')
 const sessoes = require('../models/sessoes')
 
+
+
 //criando rotas
-//1ª rota - inserir dados na tabela
+// rota - inserir dados na tabela
 
 router.post('/store',async(req,res)=>{
-    const resultado = await fotografo.create({
+    const resultado = await sessoes.create({
         cliente: req.body.cliente,
         data: req.body.data,
         tipo: req.body.tipo,
@@ -21,29 +23,31 @@ router.post('/store',async(req,res)=>{
     res.json({erro:"Não foi possível cadastra os dados"})
     }
 
-})
    
 
-//2ª Rota - Exibir página raiz do fotografo
-router.get('/show',(req,res)=>{
-    res.render('fotografos/index')
 })
 
-//3ª Rota - Consultar dados do banco
+
+// Rota - Exibir página raiz da Sessões
+router.get('/show',(req,res)=>{
+    res.render('Fotografo/index')
+})
+
+// Rota - Consultar dados do banco
 router.get('/',async(req,res)=>{
-    let resultado = await fotografo.findAll()
+    let resultado = await sessoes.findAll()
     if(resultado){
         console.log(resultado)
-        res.render('funcionario/index',{dados:resultado})
+        res.render('Fotografo/index',{dados:resultado})
     }
     else{
         console.log("Não foi possivel exibir os dados")
     }
 })
 
-//4ª Rota - deletar dados da tabela
+// Rota - deletar dados da tabela sessoes
 router.get('/destroy/:id',async(req,res)=>{
-    const resultado  = await fotografo.destroy({
+    const resultado  = await sessoes.destroy({
       where:{
         id:req.params.id
       }
@@ -52,8 +56,32 @@ router.get('/destroy/:id',async(req,res)=>{
 })
 
 
-//5ª Rota - exibir formulário
+// Rota - exibir formulário
 router.get('/create',async(req,res)=>{
         res.render('fotografo/addSessao')
 })
+
+
+//CADASTRO DO FOTOGRAFO
+router.post('/cadastrar',async(req,res)=>{
+    const resultado = await fotografo.create({
+        nome: req.body.nome,
+        especialidade: req.body.especialidade,
+        contato: req.body.contato   
+    })
+    if(resultado){
+        res.redirect('/')
+    }
+    else{
+        res.json({erro:"Não foi possível cadastra os dados"})
+    }
+
+})
+
+//Rota - Exibir formulario do fotografo
+router.get('/create2',async(req,res)=>{
+    res.render('fotografo/addFotografo')
+})
+   
+
 module.exports = router

@@ -18,6 +18,7 @@ const fotografoRouter = require('./routes/fotografo')
 //utilizando rotas
 app.use('/fotografo',fotografoRouter)
 
+
 //Exibindo informações na tela
 app.get('/',(req,res)=>{
     res.render("home")

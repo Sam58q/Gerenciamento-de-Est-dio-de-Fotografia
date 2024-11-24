@@ -9,9 +9,9 @@
 </head>
 <body>
 
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Gerenciamento de Estúdio de Fotografia</a>
+    <a class="navbar-brand titulo" href="/">Gerenciamento de Estúdio de Fotografia</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,13 +23,16 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active link" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="fotografo/create">Criar Sessões</a>
+            <a class="nav-link active link" href="fotografo/create">Criar Sessões</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/">Sessões</a>
+            <a class="nav-link active link" href="fotografo/show">Sessões</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link active link" href="fotografo/create2">fotografo</a>
           </li>
         </ul>
       </div>
@@ -41,5 +44,22 @@
     {{{body}}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
 "></script>
+<style>
+  .navbar{
+    background-color: #dac8b3;
+  }
+  .titulo{
+    color: white;
+  }
+  .link{
+   font-size: medium;
+  }
+ body{
+  background-color: #e8f1f2;
+  
+ }
+ 
+
+</style>
 </body>
 </html>
