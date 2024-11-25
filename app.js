@@ -14,10 +14,11 @@ app.set('view engine','handlebars')
 
 //Carregando as rotas
 const fotografoRouter = require('./routes/fotografo')
+const fotografo2Router = require('./routes/fotografo2')
 
 //utilizando rotas
 app.use('/fotografo',fotografoRouter)
-
+app.use('/fotografo2',fotografo2Router)
 
 //Exibindo informações na tela
 app.get('/',(req,res)=>{

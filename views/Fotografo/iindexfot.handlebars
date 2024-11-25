@@ -1,0 +1,23 @@
+
+<div class="container-fluid mb-4 row row-cols-1 row-cols-md-3 g-4 mt-2">
+    {{#each dados}}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+              <p> Nome do Fotografo : {{dataValues.nome}}</p>
+              <p>especialidade:{{dataValues.especialidade}}</p>
+              <p>Contato: {{dataValues.contato}}</p>
+               
+            </div>
+
+            <div class="card-footer text-body-secondary">
+                <a href="" class="btn btn-danger" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+            </div>
+        </div>
+    </div>
+         {{> modalDelete idItem=dataValues.id }}
+    <p>Nenhuma sessão cadastrada ainda.</p>
+    {{/each}}
+</div>

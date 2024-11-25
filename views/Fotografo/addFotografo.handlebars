@@ -4,12 +4,12 @@
         
         <section class="mb-2">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" class="form-control">
+            <input type="text" id="nome" name="nome" class="form-control" required>
         </section>
 
         <section class="mb-2">
             <label for="especialidade">Qual è a sua especialidade</label>
-            <select name="especialidade" id="especialidade" class="form-select">
+            <select name="especialidade" id="especialidade" class="form-select" required>
             <option value="">Escolha uma opção...</option>
             <option value="Fotografia de produto">Fotografia de produto</option>
             <option value="Fotografia de moda">Fotografia de moda</option>
@@ -21,7 +21,7 @@
 
         <section class="mb-2">
                 <label for="contato">Contato</label>
-                <input type="number" id="contato" name="contato" class="form-control">
+                <input type="number" id="contato" name="contato" class="form-control" required>
         </section>
        
         <section class="mb-2 d-flex justify-content-end">
@@ -30,6 +30,8 @@
         
         </form>
 </section>
+
+
 <style>
     body{
         background-color: #e8f1f2;
